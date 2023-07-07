@@ -1,6 +1,6 @@
 import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
-import 'dart:math' as math;
+import 'package:flutter_modular/flutter_modular.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,6 +10,14 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    Future.delayed(const Duration(milliseconds: 3000)).then((value) {
+      Modular.to.pushNamed('/home/', arguments: '1');
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -35,26 +43,25 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                 ),
                 const SizedBox(width: 10),
-                Transform(
-                  transform: Matrix4.skewY(0.3)..rotateZ(-math.pi / 12.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'flutterando',
-                        style: textStyles.headline1.copyWith(
-                          fontSize: 32,
-                        ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'flutterando',
+                      style: textStyles.headline1.copyWith(
+                        fontSize: 32,
                       ),
-                      Text(
+                    ),
+                    Transform.translate(
+                      offset: const Offset(0, -10),
+                      child: Text(
                         'Masterclass',
-                        style: textStyles.headline1.copyWith(
-                          fontWeight: FontWeight.w400,
+                        style: textStyles.headline3.copyWith(
                           fontSize: 20,
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ],
             ),

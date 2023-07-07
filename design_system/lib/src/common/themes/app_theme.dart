@@ -20,6 +20,11 @@ class AppTheme {
           color: LightAppThemeColors.highlight,
           fontWeight: FontWeight.w600,
         ),
+        headline3: GoogleFonts.poppins(
+          fontSize: 20,
+          color: LightAppThemeColors.highlight,
+          fontWeight: FontWeight.w400,
+        ),
         bodyText1: GoogleFonts.montserrat(
           fontSize: 14,
           color: LightAppThemeColors.description,
@@ -48,6 +53,11 @@ class AppTheme {
           fontSize: 16,
           color: DarkAppThemeColors.highlight,
           fontWeight: FontWeight.w600,
+        ),
+        headline3: GoogleFonts.poppins(
+          fontSize: 20,
+          color: DarkAppThemeColors.highlight,
+          fontWeight: FontWeight.w400,
         ),
         bodyText1: GoogleFonts.montserrat(
           fontSize: 14,
