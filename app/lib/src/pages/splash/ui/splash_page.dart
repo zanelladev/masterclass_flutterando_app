@@ -38,11 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     maxWidth: 70,
                     maxHeight: 70,
                   ),
-                  child: const Image(
-                    image: AssetImage(
-                      'assets/masterclass.png',
-                    ),
-                  ),
+                  child: Image.asset('assets/masterclass.png'),
                 ),
                 const SizedBox(width: 10),
                 Column(

@@ -20,11 +20,11 @@ class _AppWidgetState extends State<AppWidget> {
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
-      value: AppSystemChromeSettings.light,
+      value: AppSystemChromeSettings.dark,
       child: MaterialApp.router(
         title: 'Flutterando Masterclass',
         theme: AppTheme.dark,
-        darkTheme: AppTheme.light,
+        darkTheme: AppTheme.dark,
         debugShowCheckedModeBanner: false,
         routeInformationParser: Modular.routeInformationParser,
         routerDelegate: Modular.routerDelegate,

@@ -28,4 +28,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/masterclass.png 
+    - assets/masterclass.png
+    - assets/github.png
