@@ -17,7 +17,7 @@ class LightAppColorScheme extends ColorScheme {
     super.secondary = LightAppThemeColors.background,
     super.onSecondary = LightAppThemeColors.highlight,
     super.error = LightAppThemeColors.error,
-    super.onError = LightAppThemeColors.highlight,
+    super.onError = LightAppThemeColors.card,
     super.background = LightAppThemeColors.background,
     super.onBackground = LightAppThemeColors.highlight,
     super.surface = LightAppThemeColors.highlight,

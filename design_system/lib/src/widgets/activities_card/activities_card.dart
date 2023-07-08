@@ -97,8 +97,10 @@ class ActivitiesCard extends StatelessWidget {
                             child: Center(
                               child: Text(
                                 'Ver Mais',
-                                style:
-                                    textStyles.headline3.copyWith(fontSize: 12),
+                                style: textStyles.headline3.copyWith(
+                                  fontSize: 12,
+                                  color: theme.colorScheme.onError,
+                                ),
                               ),
                             ),
                           ),
