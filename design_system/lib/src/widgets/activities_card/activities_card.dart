@@ -2,7 +2,16 @@ import 'package:flutter/material.dart';
 import '../../../design_system.dart';
 
 class ActivitiesCard extends StatelessWidget {
-  const ActivitiesCard({super.key});
+  final String title;
+  final String description;
+  final int exercisesCount;
+
+  const ActivitiesCard({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.exercisesCount,
+  });
 
   @override
   Widget build(BuildContext context) {

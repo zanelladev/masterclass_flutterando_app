@@ -1,8 +1,8 @@
 class ActivitiesCardModel {
-  int? id;
-  String? title;
-  String? description;
-  int? exercisesCount;
+  int id;
+  String title;
+  String description;
+  int exercisesCount;
 
   ActivitiesCardModel({
     required this.id,
