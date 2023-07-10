@@ -13,7 +13,17 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(),
-      body: ActivitiesCard(),
+      body: ListView(
+        children: [
+          ActivitiesCard(),
+          ActivitiesCard(),
+          ActivitiesCard(),
+          ActivitiesCard(),
+          ActivitiesCard(),
+          ActivitiesCard(),
+          ActivitiesCard(),
+        ],
+      ),
       bottomNavigationBar: CustomNavigator(),
     );
   }

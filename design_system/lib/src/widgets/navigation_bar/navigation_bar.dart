@@ -23,14 +23,14 @@ class _CustomNavigatorState extends State<CustomNavigator> {
           children: [
             Column(
               children: [
-                Container(
-                  width: 60,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceVariant,
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  child: Center(
+                Center(
+                  child: Container(
+                    width: 60,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surfaceVariant,
+                      borderRadius: BorderRadius.circular(40),
+                    ),
                     child: IconButton(
                       onPressed: () {},
                       icon: Icon(
@@ -55,21 +55,20 @@ class _CustomNavigatorState extends State<CustomNavigator> {
             ),
             Column(
               children: [
-                Container(
-                  width: 60,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceVariant,
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  child: Center(
-                    child: Expanded(
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: Image.asset(
-                          'assets/github.png',
-                          color: theme.colorScheme.onBackground,
-                        ),
+                Center(
+                  child: Container(
+                    width: 60,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surfaceVariant,
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: Image.asset(
+                        'assets/github.png',
+                        color: theme.colorScheme.onBackground,
+                        width: 35,
                       ),
                     ),
                   ),
@@ -88,19 +87,19 @@ class _CustomNavigatorState extends State<CustomNavigator> {
             ),
             Column(
               children: [
-                Container(
-                  width: 60,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceVariant,
-                    borderRadius: BorderRadius.circular(40),
-                  ),
-                  child: IconButton(
-                    onPressed: () {},
-                    icon: Icon(
+                IconButton(
+                  onPressed: () {},
+                  icon: Container(
+                    width: 60,
+                    height: 40,
+                    decoration: BoxDecoration(
+                      color: theme.colorScheme.surfaceVariant,
+                      borderRadius: BorderRadius.circular(40),
+                    ),
+                    child: Icon(
                       Icons.person,
                       color: theme.colorScheme.onBackground,
-                      size: 35,
+                      size: 45,
                     ),
                   ),
                 ),
