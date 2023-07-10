@@ -53,7 +53,7 @@ class ActivitiesCard extends StatelessWidget {
                         ),
                         const SizedBox(width: 10),
                         Text(
-                          'Animações',
+                          title,
                           style: textStyles.headline3.copyWith(fontSize: 16),
                         ),
                         const Spacer(),
@@ -64,7 +64,7 @@ class ActivitiesCard extends StatelessWidget {
                                 text: 'Exercícios: ',
                                 style: textStyles.bodyText1),
                             TextSpan(
-                                text: '4',
+                                text: '$exercisesCount',
                                 style: textStyles.headline3
                                     .copyWith(fontSize: 14)),
                           ],
@@ -76,7 +76,7 @@ class ActivitiesCard extends StatelessWidget {
                         SizedBox(
                           width: deviceInfo.size.width * 0.8,
                           child: Text(
-                            'Estudos sobre animações implícitas e controladas, contendo 4 exercícios e 2 estudos',
+                            description,
                             style: textStyles.description,
                           ),
                         )

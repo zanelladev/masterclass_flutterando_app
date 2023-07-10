@@ -19,6 +19,8 @@ class _CustomAppBarState extends State<CustomAppBar> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: AppBar(
+        surfaceTintColor: theme.colorScheme.background,
+        scrolledUnderElevation: 0,
         backgroundColor: theme.colorScheme.background,
         leading: ConstrainedBox(
           constraints: const BoxConstraints(
