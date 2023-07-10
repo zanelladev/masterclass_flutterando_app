@@ -5,12 +5,14 @@ class ActivitiesCard extends StatelessWidget {
   final String title;
   final String description;
   final int exercisesCount;
+  final IconData icon;
 
   const ActivitiesCard({
     super.key,
     required this.title,
     required this.description,
     required this.exercisesCount,
+    required this.icon,
   });
 
   @override
@@ -33,7 +35,7 @@ class ActivitiesCard extends StatelessWidget {
               width: deviceInfo.size.width * 0.95,
               height: deviceInfo.size.height * 0.25,
               child: Padding(
-                padding: const EdgeInsets.all(10),
+                padding: const EdgeInsets.all(12),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -46,7 +48,7 @@ class ActivitiesCard extends StatelessWidget {
                           width: 40,
                           height: 40,
                           child: Icon(
-                            Icons.directions_run,
+                            icon,
                             color: theme.colorScheme.background,
                             size: 35,
                           ),
@@ -86,7 +88,7 @@ class ActivitiesCard extends StatelessWidget {
                       children: [
                         Image.asset(
                           'assets/github.png',
-                          width: 30,
+                          width: 20,
                           color: theme.colorScheme.onSecondary,
                         ),
                         const SizedBox(width: 10),

@@ -14,29 +14,30 @@ class _CustomNavigatorState extends State<CustomNavigator> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final textStyles = theme.extension<AppTextStylesExtension>()!;
-    final deviceInfo = MediaQuery.of(context);
     return SafeArea(
       child: SizedBox(
         height: 80,
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                  child: Container(
-                    width: 60,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: theme.colorScheme.surfaceVariant,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Container(
+                      width: 60,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.surfaceVariant,
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Icon(
                         Icons.track_changes,
                         color: theme.colorScheme.onBackground,
-                        size: 35,
+                        size: 40,
                       ),
                     ),
                   ),
@@ -54,21 +55,22 @@ class _CustomNavigatorState extends State<CustomNavigator> {
               color: Colors.grey,
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                  child: Container(
-                    width: 60,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      color: theme.colorScheme.surfaceVariant,
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                    child: IconButton(
-                      onPressed: () {},
-                      icon: Image.asset(
+                  child: IconButton(
+                    onPressed: () {},
+                    icon: Container(
+                      width: 60,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: theme.colorScheme.surfaceVariant,
+                        borderRadius: BorderRadius.circular(40),
+                      ),
+                      child: Image.asset(
                         'assets/github.png',
                         color: theme.colorScheme.onBackground,
-                        width: 35,
+                        width: 40,
                       ),
                     ),
                   ),
@@ -86,6 +88,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
               color: Colors.grey,
             ),
             Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
                   onPressed: () {},

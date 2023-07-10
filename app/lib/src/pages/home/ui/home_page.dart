@@ -23,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             title: activitiesCardList[index].title,
             description: activitiesCardList[index].description,
             exercisesCount: activitiesCardList[index].exercisesCount,
+            icon: activitiesCardList[index].icon,
           );
         },
       ),
