@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../design_system.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ActivitiesCard extends StatelessWidget {
   final String title;
@@ -86,10 +87,10 @@ class ActivitiesCard extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Image.asset(
-                          'assets/github.png',
-                          width: 20,
+                        Icon(
+                          FontAwesomeIcons.github,
                           color: theme.colorScheme.onSecondary,
+                          size: 25,
                         ),
                         const SizedBox(width: 10),
                         Text(
