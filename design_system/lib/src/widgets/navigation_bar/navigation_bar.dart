@@ -124,7 +124,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                   onPressed: () {
                     setState(() {
                       if (pageIndex != 3) {
-                        Modular.to.pushNamed('/splash/', arguments: '1');
+                        Modular.to.pushNamed('/about/', arguments: '1');
                       }
                       pageIndex = 3;
                     });
