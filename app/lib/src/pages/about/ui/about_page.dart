@@ -42,6 +42,16 @@ class AboutPage extends StatelessWidget {
                     },
                   ),
                 ),
+                const SizedBox(height: 10),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Habilidades e Competências',
+                    style: textStyles.headline2,
+                  ),
+                ),
+                const SizedBox(height: 10),
+                const SkillsCard(),
               ],
             ),
           ),

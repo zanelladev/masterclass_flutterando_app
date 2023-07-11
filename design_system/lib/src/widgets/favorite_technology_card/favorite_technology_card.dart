@@ -9,7 +9,6 @@ class FavoriteTechologyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final textStyles = theme.extension<AppTextStylesExtension>()!;
-    final deviceInfo = MediaQuery.of(context);
     return Container(
       height: 100,
       width: 100,
