@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
-      bottomNavigationBar: CustomNavigator(),
+      bottomNavigationBar: CustomNavigator(pageIndex: 1),
     );
   }
 }

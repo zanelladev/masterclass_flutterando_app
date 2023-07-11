@@ -1,15 +1,27 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_modular/flutter_modular.dart';
 import '../../../design_system.dart';
 
 class CustomNavigator extends StatefulWidget {
-  const CustomNavigator({super.key});
+  final int pageIndex;
+  const CustomNavigator({
+    super.key,
+    required this.pageIndex,
+  });
 
   @override
   State<CustomNavigator> createState() => _CustomNavigatorState();
 }
 
 class _CustomNavigatorState extends State<CustomNavigator> {
+  int pageIndex = 1;
+
+  @override
+  void initState() {
+    super.initState();
+    pageIndex = widget.pageIndex;
+  }
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -26,12 +38,21 @@ class _CustomNavigatorState extends State<CustomNavigator> {
               children: [
                 Center(
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (pageIndex != 1) {
+                        Modular.to.pushNamed('/splash/', arguments: '1');
+                      }
+                      setState(() {
+                        pageIndex = 1;
+                      });
+                    },
                     icon: Container(
                       width: 60,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: theme.colorScheme.surfaceVariant,
+                        color: pageIndex == 1
+                            ? theme.colorScheme.surfaceVariant
+                            : const Color.fromARGB(0, 255, 255, 255),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Icon(
@@ -59,12 +80,21 @@ class _CustomNavigatorState extends State<CustomNavigator> {
               children: [
                 Center(
                   child: IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      if (pageIndex != 2) {
+                        Modular.to.pushNamed('/splash/', arguments: '1');
+                      }
+                      setState(() {
+                        pageIndex = 2;
+                      });
+                    },
                     icon: Container(
                       width: 60,
                       height: 40,
                       decoration: BoxDecoration(
-                        color: theme.colorScheme.surfaceVariant,
+                        color: pageIndex == 2
+                            ? theme.colorScheme.surfaceVariant
+                            : const Color.fromARGB(0, 255, 255, 255),
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Image.asset(
@@ -91,12 +121,21 @@ class _CustomNavigatorState extends State<CustomNavigator> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      if (pageIndex != 3) {
+                        Modular.to.pushNamed('/splash/', arguments: '1');
+                      }
+                      pageIndex = 3;
+                    });
+                  },
                   icon: Container(
                     width: 60,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: theme.colorScheme.surfaceVariant,
+                      color: pageIndex == 3
+                          ? theme.colorScheme.surfaceVariant
+                          : const Color.fromARGB(0, 255, 255, 255),
                       borderRadius: BorderRadius.circular(40),
                     ),
                     child: Icon(
