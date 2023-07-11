@@ -40,7 +40,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                   child: IconButton(
                     onPressed: () {
                       if (pageIndex != 1) {
-                        Modular.to.pushNamed('/splash/', arguments: '1');
+                        Modular.to.pushNamed('/home/', arguments: '1');
                       }
                       setState(() {
                         pageIndex = 1;
@@ -48,7 +48,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                     },
                     icon: Container(
                       width: 60,
-                      height: 40,
+                      height: 30,
                       decoration: BoxDecoration(
                         color: pageIndex == 1
                             ? theme.colorScheme.surfaceVariant
@@ -58,7 +58,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                       child: Icon(
                         Icons.track_changes,
                         color: theme.colorScheme.onBackground,
-                        size: 40,
+                        size: 30,
                       ),
                     ),
                   ),
@@ -82,7 +82,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                   child: IconButton(
                     onPressed: () {
                       if (pageIndex != 2) {
-                        Modular.to.pushNamed('/splash/', arguments: '1');
+                        Modular.to.pushNamed('/repository/', arguments: '1');
                       }
                       setState(() {
                         pageIndex = 2;
@@ -90,7 +90,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                     },
                     icon: Container(
                       width: 60,
-                      height: 40,
+                      height: 30,
                       decoration: BoxDecoration(
                         color: pageIndex == 2
                             ? theme.colorScheme.surfaceVariant
@@ -100,7 +100,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                       child: Image.asset(
                         'assets/github.png',
                         color: theme.colorScheme.onBackground,
-                        width: 40,
+                        width: 30,
                       ),
                     ),
                   ),
@@ -131,7 +131,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                   },
                   icon: Container(
                     width: 60,
-                    height: 40,
+                    height: 30,
                     decoration: BoxDecoration(
                       color: pageIndex == 3
                           ? theme.colorScheme.surfaceVariant
@@ -141,7 +141,7 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                     child: Icon(
                       Icons.person,
                       color: theme.colorScheme.onBackground,
-                      size: 45,
+                      size: 30,
                     ),
                   ),
                 ),

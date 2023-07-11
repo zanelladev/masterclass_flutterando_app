@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../../design_system.dart';
 
-class CustomAppBar extends StatefulWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
+  final IconData? icon;
+  const CustomAppBar({
+    super.key,
+    required this.title,
+    this.icon,
+  });
 
-  @override
-  State<CustomAppBar> createState() => _CustomAppBarState();
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
-}
-
-class _CustomAppBarState extends State<CustomAppBar> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -27,14 +25,15 @@ class _CustomAppBarState extends State<CustomAppBar> {
             maxWidth: 50,
             maxHeight: 50,
           ),
-          child: Image.asset('assets/masterclass.png'),
+          child:
+              icon != null ? Icon(icon) : Image.asset('assets/masterclass.png'),
         ),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Atividades',
+              title,
               style: textStyles.headline1.copyWith(),
             ),
             Text(
@@ -58,4 +57,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
       ),
     );
   }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

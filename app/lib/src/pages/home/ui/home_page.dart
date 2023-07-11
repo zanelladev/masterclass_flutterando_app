@@ -2,20 +2,15 @@ import 'package:design_system/design_system.dart';
 import 'package:flutter/material.dart';
 import 'package:masterclass_app/src/models/activities_card_models.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   final activitiesCardList = ActivitiesCardModel.activitiesCardList();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(title: 'Atividades'),
       body: ListView.builder(
         itemCount: activitiesCardList.length,
         itemBuilder: (BuildContext context, int index) {
@@ -27,7 +22,7 @@ class _HomePageState extends State<HomePage> {
           );
         },
       ),
-      bottomNavigationBar: CustomNavigator(pageIndex: 1),
+      bottomNavigationBar: const CustomNavigator(pageIndex: 1),
     );
   }
 }
