@@ -29,4 +29,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/masterclass.png
-    - assets/github.png
+    - assets/dev_picture.png

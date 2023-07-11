@@ -6,9 +6,16 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final deviceInfo = MediaQuery.of(context);
     return Scaffold(
       appBar: const CustomAppBar(title: 'Sobre o dev'),
-      body: Container(),
+      body: SizedBox(
+        width: deviceInfo.size.width,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [AboutCard()],
+        ),
+      ),
       bottomNavigationBar: const CustomNavigator(pageIndex: 3),
     );
   }

@@ -12,6 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+
+  font_awesome_flutter: ^10.5.0
+
   flutter_modular: ^5.0.3
 
   google_fonts: ^5.1.0
@@ -25,4 +28,4 @@ dev_dependencies:
 flutter:
   assets:
     - assets/masterclass.png 
-    - assets/github.png
+    - assets/dev_picture.png

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../design_system.dart';
 
 class CustomNavigator extends StatefulWidget {
@@ -56,9 +57,9 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: Icon(
-                        Icons.track_changes,
+                        FontAwesomeIcons.bullseye,
                         color: theme.colorScheme.onBackground,
-                        size: 30,
+                        size: 25,
                       ),
                     ),
                   ),
@@ -97,10 +98,10 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                             : const Color.fromARGB(0, 255, 255, 255),
                         borderRadius: BorderRadius.circular(40),
                       ),
-                      child: Image.asset(
-                        'assets/github.png',
-                        color: theme.colorScheme.onBackground,
-                        width: 30,
+                      child: Icon(
+                        FontAwesomeIcons.github,
+                        color: theme.colorScheme.onSecondary,
+                        size: 25,
                       ),
                     ),
                   ),
@@ -139,9 +140,9 @@ class _CustomNavigatorState extends State<CustomNavigator> {
                       borderRadius: BorderRadius.circular(40),
                     ),
                     child: Icon(
-                      Icons.person,
+                      FontAwesomeIcons.solidUser,
                       color: theme.colorScheme.onBackground,
-                      size: 30,
+                      size: 25,
                     ),
                   ),
                 ),
