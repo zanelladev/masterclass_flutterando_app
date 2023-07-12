@@ -26,8 +26,18 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             maxWidth: 50,
             maxHeight: 50,
           ),
-          child:
-              icon != null ? Icon(icon) : Image.asset('assets/masterclass.png'),
+          child: icon != null
+              ? IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    icon,
+                    color: theme.colorScheme.onSecondary,
+                    size: 30,
+                  ),
+                )
+              : Image.asset('assets/masterclass.png'),
         ),
         title: Column(
           mainAxisAlignment: MainAxisAlignment.center,

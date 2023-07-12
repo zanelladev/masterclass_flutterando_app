@@ -15,7 +15,7 @@ class ActivitiesCardModel {
     required this.icon,
   });
 
-  static List<ActivitiesCardModel> activitiesCardList() => [
+  static List<ActivitiesCardModel> get activitiesCardList => [
         ActivitiesCardModel(
           id: 0,
           title: 'Animações',

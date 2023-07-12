@@ -5,7 +5,7 @@ import 'package:masterclass_app/src/models/activities_card_models.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
-  final activitiesCardList = ActivitiesCardModel.activitiesCardList();
+  final activitiesCardList = ActivitiesCardModel.activitiesCardList;
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
         itemCount: activitiesCardList.length,
         itemBuilder: (BuildContext context, int index) {
           return ActivitiesCard(
+            id: index,
             title: activitiesCardList[index].title,
             description: activitiesCardList[index].description,
             exercisesCount: activitiesCardList[index].exercisesCount,

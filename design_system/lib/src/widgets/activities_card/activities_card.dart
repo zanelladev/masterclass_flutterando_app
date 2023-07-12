@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import '../../../design_system.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ActivitiesCard extends StatelessWidget {
+  final int id;
   final String title;
   final String description;
   final int exercisesCount;
@@ -10,6 +12,7 @@ class ActivitiesCard extends StatelessWidget {
 
   const ActivitiesCard({
     super.key,
+    required this.id,
     required this.title,
     required this.description,
     required this.exercisesCount,
@@ -99,7 +102,12 @@ class ActivitiesCard extends StatelessWidget {
                         ),
                         const Spacer(),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Modular.to.pushNamed(
+                              '/home/exercises',
+                              arguments: id,
+                            );
+                          },
                           child: Container(
                             decoration: BoxDecoration(
                                 color: theme.colorScheme.primary,
