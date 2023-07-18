@@ -10,7 +10,6 @@ class ExercisesCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final textStyles = theme.extension<AppTextStylesExtension>()!;
-    final deviceInfo = MediaQuery.of(context);
     return Container(
       height: 60,
       decoration: BoxDecoration(
@@ -18,7 +17,7 @@ class ExercisesCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(25),
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 14),
+        padding: const EdgeInsets.symmetric(horizontal: 14),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

@@ -39,12 +39,5 @@ class ActivitiesCardModel {
           exercisesCount: 3,
           icon: Icons.gamepad_outlined,
         ),
-        ActivitiesCardModel(
-          id: 3,
-          title: 'Playground',
-          description: 'Ambiente destinado a testes e estudos em geral',
-          exercisesCount: 3,
-          icon: Icons.gamepad_outlined,
-        ),
       ];
 }

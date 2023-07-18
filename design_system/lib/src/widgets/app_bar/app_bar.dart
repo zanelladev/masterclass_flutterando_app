@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../design_system.dart';
+import 'package:masterclass_app/src/app_widget.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
@@ -56,9 +57,11 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           ],
         ),
         actions: [
-          InkWell(
-            onTap: () {},
-            child: Icon(
+          IconButton(
+            onPressed: () {
+              AppWidget.of(context)!.changeTheme();
+            },
+            icon: Icon(
               FontAwesomeIcons.solidMoon,
               color: theme.colorScheme.onSecondary,
               size: 30,

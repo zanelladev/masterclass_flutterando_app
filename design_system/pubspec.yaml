@@ -12,6 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  masterclass_app:
+    path: ../app
 
   font_awesome_flutter: ^10.5.0
 
