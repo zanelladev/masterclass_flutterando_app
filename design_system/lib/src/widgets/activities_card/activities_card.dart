@@ -4,6 +4,7 @@ import '../../../design_system.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ActivitiesCard extends StatelessWidget {
+  final String route;
   final int id;
   final String title;
   final String description;
@@ -12,6 +13,7 @@ class ActivitiesCard extends StatelessWidget {
 
   const ActivitiesCard({
     super.key,
+    required this.route,
     required this.id,
     required this.title,
     required this.description,
@@ -104,7 +106,7 @@ class ActivitiesCard extends StatelessWidget {
                         InkWell(
                           onTap: () {
                             Modular.to.pushNamed(
-                              '/home/exercises',
+                              route,
                               arguments: id,
                             );
                           },

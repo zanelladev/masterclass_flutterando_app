@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
         itemCount: activitiesCardList.length,
         itemBuilder: (BuildContext context, int index) {
           return ActivitiesCard(
+            route: '/home/exercises',
             id: index,
             title: activitiesCardList[index].title,
             description: activitiesCardList[index].description,

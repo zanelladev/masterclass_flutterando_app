@@ -2,18 +2,21 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:design_system/design_system.dart';
+//import 'package:shared_preferences/shared_preferences.dart';
 
 class AppWidget extends StatefulWidget {
   const AppWidget({super.key});
 
   @override
-  State<AppWidget> createState() => _AppWidgetState();
+  State<AppWidget> createState() => AppWidgetState();
 
-  static _AppWidgetState? of(BuildContext context) =>
-      context.findAncestorStateOfType<_AppWidgetState>();
+  static AppWidgetState? of(BuildContext context) =>
+      context.findAncestorStateOfType<AppWidgetState>();
 }
 
-class _AppWidgetState extends State<AppWidget> {
+class AppWidgetState extends State<AppWidget> {
+  //final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
   @override
   void initState() {
     super.initState();
